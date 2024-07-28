@@ -18,6 +18,9 @@ connectDB();
 // rest object
 const app = express();
 
+// removing the error of __dirname is not defined in es modules 
+const __dirname = path.resolve();
+
 // middlewares
 app.use(cors());
 app.use(express.json());
